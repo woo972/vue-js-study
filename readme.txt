@@ -7,3 +7,7 @@ day1
 6. vue.js devtools 설정 (chrome://extensions) 파일 URL에 대한 액세스 허용, 시크릿 모드에서 허용
 7. yarn 설치(cmd창 npm install -g yarn)
 8. vue-cli 설치(cmd창 yarn global add vue-cli)
+
+과제
+javascript Array method / filter, map, recuce, push, splice, slice, find, findIndex, shift, unshift, sort 기능 확인
+
