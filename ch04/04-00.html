@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{num}}</h1>
+        <input type="text" @keyup="keyEvent"/>
+        <!-- 
+            charCode 값 얻기 위해서는 keypress를 써야함
+            문자가 찍혀야만 이벤트 발생
+            e.g) ctrl, backspace 키 등은 불가함
+        -->
+        <input type="text" @keypress="keyEvent"/> 
+        <button @click="add" id="a">add</button>
+        <button @click="substract" id="b">sub</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                num:0
+            },
+            methods:{
+                add: function(e){
+                    this.num++;
+                    console.log(e);
+                    
+                }   ,
+                substract: function(e){
+                    this.num--;
+                    console.log(e.target);
+                    console.log(e.path);                    
+                },
+                keyEvent: function(e){
+                    console.log(e);
+                }             
+            }
+
+        })
+    </script>
+</body>
+</html>
