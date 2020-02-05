@@ -1,0 +1,7 @@
+{
+    "presets": ["env", "stage-2"]
+}
+
+// presets : 바벨이 준비하고 있는 es6 문
+// env : es6 문법 표준
+// stage-2 : 표준 후보

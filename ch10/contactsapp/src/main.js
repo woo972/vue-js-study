@@ -1,6 +1,10 @@
 import Vue from 'vue'
-import './plugins/axios'
+import 'bootstrap/dist/css/bootstrap.css'
 import App from './App.vue'
+import axios from 'axios'
+import ES6Promise from 'es6-promise'
+
+
 
 Vue.config.productionTip = false
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>06-12</title>
+  <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<template id="listTemplate">
+    <li>{{message}}</li>
+</template>
+<script type="text/javascript">
+Vue.component('list-component', {
+    template : '#listTemplate',
+    props : { 
+        message:{type:String, default:"hi"},
+        count:{type:Number, required:true}
+    }    // 받으려고 하는 props 선언
+})
+</script>
+<body>
+<div id="app">
+    <ul>
+        <list-component :message="'Hello'" :count=100></list-component>
+        <list-component :message="val" :count=100></list-component>
+        <list-component message="니하오마" :count=100></list-component>
+        <list-component  :count=100></list-component>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+var vm = new Vue({
+    el : "#app",
+    data: {
+        val:'hey'
+    }
+})
+</script>
+</html>

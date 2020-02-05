@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>05-04</title>
+  <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+<div id="example">
+    <!-- 
+      배열 뒤에 적은 스타일이 나중에 적용되기 때문에
+      버튼은 보라색으로 보이게 될 것임
+    -->
+    <button :style="[myLayout, myColor]" id="btn1">버튼1</button>
+</div>
+<script type="text/javascript">
+var vm = new Vue({
+  el : "#example",
+  data : {
+    myColor : { backgroundColor:'purple', color:'yellow' },
+    myLayout : { backgroundColor:'yellow',width:'150px', height:'80px', textAlign:'center' }
+  }
+})
+</script>
+</body>
+</html>
