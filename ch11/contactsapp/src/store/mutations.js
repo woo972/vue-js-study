@@ -1,9 +1,9 @@
-import Constant from '../Constant';
+import Constant from '../constant';
 
-//상태를 변경하는 기능만을 뽑아서...
+//상태를 변경하는 기능만 구현
 export default {
     [Constant.ADD_CONTACT_FORM] : (state) => {
-        state.contact = { no:'', name:'', tel:'', address:'', photo:'' };
+        state.contact = { no: '', name:'', tel:'', address:'', photo:'' },
         state.mode = "add";
         state.currentView = "contactForm";
     },

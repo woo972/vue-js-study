@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import Constant from '../Constant';
+import Constant from '../constant';
 import { mapState } from 'vuex';
 import Paginate from 'vuejs-paginate';
 
@@ -75,7 +75,7 @@ export default {
             this.$store.dispatch(Constant.EDIT_CONTACT_FORM, {no:no});
         },
         deleteContact : function(no) {
-            if (confirm("정말로 삭제하시겠습니까?") == true) {
+            if (confirm("정말로 삭제하시겠습니까?") === true) {
                 this.$store.dispatch(Constant.DELETE_CONTACT, {no:no});
             }
         },

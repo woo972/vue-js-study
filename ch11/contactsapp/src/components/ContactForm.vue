@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import Constant from '../Constant';
+import Constant from '../constant';
 import { mapState } from 'vuex';
 
 export default {
@@ -54,6 +54,11 @@ export default {
     },
     methods : {
         submitEvent : function() {
+            // 양방향 바인딩 시 mutations을 이용하지 않고 데이터(상태)가 변경되기 때문에
+            // strict: true 시 에러가 나는 것을 볼 수 있음
+            // critical 하지 않으므로, 그냥 사용하거나
+            // 양방향 -> 단방향으로 변경 뒤 이벤트처리해서 데이터 변경
+            // 또는 로컬에 데이터를 복사해서 사용
             if (this.mode == "update") {
                 this.$store.dispatch(Constant.UPDATE_CONTACT);
             } else {

@@ -74,3 +74,34 @@ obj.add(4,5)
 ===> vue에서는 1차적인 메서드는 전통적인 function 문법을 쓰되,
 	그 안의 중첩된 function은 화살표 함수 가능
 
+
+
+
+
+
+day5
+
+예제 구조
+backend
+백엔드 애플리케이션 node + express
+/gym 경로에 vue 앱을 배포함.
+routertest
+vue-router을 이용한 간단한 예제
+
+
+핵심 설정
+routertest의 vue.config.js 파일을 검토 (publicPath)
+module.exports = {
+    publicPath : "/gym/",
+    productionSourceMap : false,
+}
+package.json의 scripts를 검토(build -> delete target -> copy output)
+App.vue의 router 객체의 base 속성 검토
+const router = new VueRouter({
+  base: "/gym",
+  //mode : "history",
+  routes : [
+    ......
+  ]
+})
+

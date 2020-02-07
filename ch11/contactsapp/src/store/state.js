@@ -1,4 +1,4 @@
-import CONF from '../Config';
+import CONF from '../config';
 
 export default {
     currentView : null, 

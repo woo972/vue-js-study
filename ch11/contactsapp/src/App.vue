@@ -13,7 +13,6 @@
 import ContactList from './components/ContactList';
 import ContactForm from './components/ContactForm';
 import UpdatePhoto from './components/UpdatePhoto';
-
 import { mapState } from 'vuex';
 
 export default {    
