@@ -1,7 +1,8 @@
 <template>
 <div>
-  <WorkingTypeSelector slot="selects"/>
   <Card :title="title" :subDesc="subDesc">
+      <WorkingTypeSelector slot="selects1"/>
+  <CenterSelector slot="selects2"/>
     <v-container slot="contents">
         <table>
             <tr>
@@ -35,10 +36,11 @@
 <script>
 import Card from './Card.vue';
 import WorkingTypeSelector from './WorkingTypeSelector.vue';
+import CenterSelector from './CenterSelector.vue';
 
 export default {
   name: 'Table1',
-  components: { Card, WorkingTypeSelector },
+  components: { Card, WorkingTypeSelector, CenterSelector },
   data() {
     return {
       title: '미결현황',

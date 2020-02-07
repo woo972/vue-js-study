@@ -1,5 +1,5 @@
 <template>
-<SelectBox :items="items" :label="label"/>
+  <SelectBox :items="items" :label="label"/>
 </template>
 
 <script>
@@ -11,7 +11,9 @@ export default {
   data() {
     return {
       items: [
-        '내근', '외근',
+        { text: '전체', value: 0 },
+        { text: '내근', value: 1 },
+        { text: '외근', value: 2 },
       ],
       label: '내외근',
     };
